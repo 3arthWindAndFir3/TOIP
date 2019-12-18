@@ -10,6 +10,7 @@ public class Search {
 		
 		int[] array = new int[16];
 		int numbers=0;
+		int sravnenie=0;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Заполните массив элементами:");
@@ -23,10 +24,11 @@ public class Search {
 		    System.out.println("Введите искомый элемент:");    
 		    int poisk = scan.nextInt(); 
 		    System.out.println ("Введен искомый элемент:" + poisk + "  Осуществляем поиск");
-		    for (int i = 0;  i < 16; i++) {
-		       if (poisk>array[i] || poisk<array[i]) {} else {numbers=numbers+1; System.out.println ("Найдено совпадение в ячейке № " +i); break;}
+		       for (int i = 0;  i < 16; i++) {
+		       if (poisk>array[i] || poisk<array[i]) {sravnenie=sravnenie+1;} else {numbers=numbers+1;sravnenie=sravnenie+1; System.out.println ("Найдено совпадение в ячейке № " +i); break;}
 		       
 		    }
+		    System.out.println("Число сравнений=" + sravnenie);
 		       if (numbers>0) {System.out.println ("Поиск завершен успешно");} else {System.out.println ("Поиск завершен, совпадений не найдено");};
 		             
                     }
